@@ -17,6 +17,7 @@
 		B04E48DF19C0A0FB00FA01D2 /* ntbldmtn.mid in Resources */ = {isa = PBXBuildFile; fileRef = B04E48DE19C0A0FB00FA01D2 /* ntbldmtn.mid */; };
 		B04E48E119C0A24100FA01D2 /* sibeliusGMajor.mid in Resources */ = {isa = PBXBuildFile; fileRef = B04E48E019C0A24100FA01D2 /* sibeliusGMajor.mid */; };
 		B04E48E519C0BCE500FA01D2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B04E48E419C0BCE500FA01D2 /* README.md */; };
+		B055F22A19C0EC7C00408FA6 /* gs_instruments.dls in Resources */ = {isa = PBXBuildFile; fileRef = B055F22919C0EC7C00408FA6 /* gs_instruments.dls */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		B04E48DE19C0A0FB00FA01D2 /* ntbldmtn.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = ntbldmtn.mid; sourceTree = "<group>"; };
 		B04E48E019C0A24100FA01D2 /* sibeliusGMajor.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = sibeliusGMajor.mid; path = ../sibeliusGMajor.mid; sourceTree = "<group>"; };
 		B04E48E419C0BCE500FA01D2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B055F22919C0EC7C00408FA6 /* gs_instruments.dls */ = {isa = PBXFileReference; lastKnownFileType = file; path = gs_instruments.dls; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		B04E48AE19C0A08D00FA01D2 = {
 			isa = PBXGroup;
 			children = (
+				B055F22919C0EC7C00408FA6 /* gs_instruments.dls */,
 				B04E48E419C0BCE500FA01D2 /* README.md */,
 				B04E48B919C0A08D00FA01D2 /* MIDIPlayer */,
 				B04E48CF19C0A08D00FA01D2 /* MIDIPlayerTests */,
@@ -209,6 +212,7 @@
 				B04E48DD19C0A0D900FA01D2 /* GeneralUser GS MuseScore v1.442.sf2 in Resources */,
 				B04E48C219C0A08D00FA01D2 /* Main.storyboard in Resources */,
 				B04E48C719C0A08D00FA01D2 /* LaunchScreen.xib in Resources */,
+				B055F22A19C0EC7C00408FA6 /* gs_instruments.dls in Resources */,
 				B04E48C419C0A08D00FA01D2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

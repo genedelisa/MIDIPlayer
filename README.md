@@ -1,8 +1,8 @@
 # MIDIPlayer
 
-Using AVMIDIPlayer.
+Using AVMIDIPlayer from a MIDI file, and from a MusicSequence.
 
-SoundFonts don't seem to work yet.'
+SoundFonts don't seem to work yet. Nor DLS files.
 
 
 ## Blog post for this example.

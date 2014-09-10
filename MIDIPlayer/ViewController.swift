@@ -57,7 +57,9 @@ class ViewController: UIViewController {
         }
         
         if let contents = NSBundle.mainBundle().URLForResource(gMajor, withExtension: "mid") {
-            self.soundbank = NSBundle.mainBundle().URLForResource(soundFontMuseCoreName, withExtension: "sf2")
+//            self.soundbank = NSBundle.mainBundle().URLForResource(soundFontMuseCoreName, withExtension: "sf2")
+            self.soundbank = NSBundle.mainBundle().URLForResource("gs_instruments", withExtension: "dls")
+            println("soundbank \(soundbank!)")
             if self.soundbank != nil {
                 var error:NSError?
                 self.mp = AVMIDIPlayer(contentsOfURL: contents, soundBankURL: soundbank!, error: &error)
