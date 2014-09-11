@@ -45,7 +45,7 @@
 		B04E48DE19C0A0FB00FA01D2 /* ntbldmtn.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = ntbldmtn.mid; sourceTree = "<group>"; };
 		B04E48E019C0A24100FA01D2 /* sibeliusGMajor.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = sibeliusGMajor.mid; path = ../sibeliusGMajor.mid; sourceTree = "<group>"; };
 		B04E48E419C0BCE500FA01D2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B055F22919C0EC7C00408FA6 /* gs_instruments.dls */ = {isa = PBXFileReference; lastKnownFileType = file; path = gs_instruments.dls; sourceTree = "<group>"; };
+		B055F22919C0EC7C00408FA6 /* gs_instruments.dls */ = {isa = PBXFileReference; lastKnownFileType = file; name = gs_instruments.dls; path = ../gs_instruments.dls; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,6 @@
 		B04E48AE19C0A08D00FA01D2 = {
 			isa = PBXGroup;
 			children = (
-				B055F22919C0EC7C00408FA6 /* gs_instruments.dls */,
 				B04E48E419C0BCE500FA01D2 /* README.md */,
 				B04E48B919C0A08D00FA01D2 /* MIDIPlayer */,
 				B04E48CF19C0A08D00FA01D2 /* MIDIPlayerTests */,
@@ -89,6 +88,7 @@
 		B04E48B919C0A08D00FA01D2 /* MIDIPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				B055F22919C0EC7C00408FA6 /* gs_instruments.dls */,
 				B04E48E019C0A24100FA01D2 /* sibeliusGMajor.mid */,
 				B04E48DE19C0A0FB00FA01D2 /* ntbldmtn.mid */,
 				B04E48DC19C0A0D900FA01D2 /* GeneralUser GS MuseScore v1.442.sf2 */,

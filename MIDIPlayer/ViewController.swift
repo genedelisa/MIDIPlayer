@@ -11,8 +11,8 @@ import AVFoundation
 
 class ViewController: UIViewController {
     var mp:AVMIDIPlayer?
+    var musicPlayer:MusicPlayer?
     var soundbank:NSURL?
-//    let soundFontPianoName = "acoustic_grand_piano_ydp_20080910"
     let soundFontMuseCoreName = "GeneralUser GS MuseScore v1.442"
     let gMajor = "sibeliusGMajor"
     let nightBaldMountain = "ntbldmtn" 
@@ -77,6 +77,59 @@ class ViewController: UIViewController {
         }
     }
     
+    func playWithMusicPlayer() {
+        var sequence = createMusicSequence()
+        self.musicPlayer = createMusicPlayer(sequence)
+        playMusicPlayer()
+    }
+    
+    func createMusicPlayer(musicSequence:MusicSequence) -> MusicPlayer {
+        var musicPlayer:MusicPlayer = MusicPlayer()
+        var status = OSStatus(noErr)
+        status = NewMusicPlayer(&musicPlayer)
+        if status != OSStatus(noErr) {
+            println("bad status \(status) creating player")
+        }
+        status = MusicPlayerSetSequence(musicPlayer, musicSequence)
+        if status != OSStatus(noErr) {
+            println("setting sequence \(status)")
+        }
+        status = MusicPlayerPreroll(musicPlayer)
+        if status != OSStatus(noErr) {
+            println("prerolling player \(status)")
+        }
+        return musicPlayer
+    }
+    
+    func playMusicPlayer() {
+        var status = OSStatus(noErr)
+        var playing:Boolean = 0
+        status = MusicPlayerIsPlaying(musicPlayer!, &playing)
+        if playing != 0 {
+            println("music player is playing. stopping")
+            status = MusicPlayerStop(musicPlayer!)
+            if status != OSStatus(noErr) {
+                println("Error stopping \(status)")
+                return
+            }
+        } else {
+            println("music player is not playing.")
+        }
+        
+        status = MusicPlayerSetTime(musicPlayer!, 0)
+        if status != OSStatus(noErr) {
+            println("setting time \(status)")
+            return
+        }
+        
+        status = MusicPlayerStart(musicPlayer!)
+        if status != OSStatus(noErr) {
+            println("Error starting \(status)")
+            return
+        }
+    }
+
+    
     func midiData() {
         if let contents = NSBundle.mainBundle().URLForResource(nightBaldMountain, withExtension: "mid") {
             self.soundbank = NSBundle.mainBundle().URLForResource(soundFontMuseCoreName, withExtension: "sf2")
@@ -124,6 +177,19 @@ class ViewController: UIViewController {
         if status != OSStatus(noErr) {
             println("\(__LINE__) bad status \(status) creating sequence")
         }
+        
+        var tempoTrack:MusicTrack = MusicTrack()
+        if MusicSequenceGetTempoTrack(musicSequence, &tempoTrack) != noErr {
+            assert(tempoTrack != nil, "Cannot get tempo track")
+        }
+        //MusicTrackClear(tempoTrack, 0, 1)
+        if MusicTrackNewExtendedTempoEvent(tempoTrack, 0.0, 128.0) != noErr {
+            println("could not set tempo")
+        }
+        if MusicTrackNewExtendedTempoEvent(tempoTrack, 4.0, 256.0) != noErr {
+            println("could not set tempo")
+        }
+        
         
         // add a track
         var track:MusicTrack = MusicTrack()
