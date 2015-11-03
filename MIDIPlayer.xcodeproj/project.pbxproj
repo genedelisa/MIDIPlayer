@@ -17,6 +17,9 @@
 		B04E48DF19C0A0FB00FA01D2 /* ntbldmtn.mid in Resources */ = {isa = PBXBuildFile; fileRef = B04E48DE19C0A0FB00FA01D2 /* ntbldmtn.mid */; };
 		B04E48E119C0A24100FA01D2 /* sibeliusGMajor.mid in Resources */ = {isa = PBXBuildFile; fileRef = B04E48E019C0A24100FA01D2 /* sibeliusGMajor.mid */; };
 		B055F22A19C0EC7C00408FA6 /* gs_instruments.dls in Resources */ = {isa = PBXBuildFile; fileRef = B055F22919C0EC7C00408FA6 /* gs_instruments.dls */; };
+		B06E2AD61BE9186F00C299B4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B06E2AD51BE9186F00C299B4 /* LICENSE */; };
+		B06E2AD81BE919AE00C299B4 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B06E2AD71BE919AE00C299B4 /* .travis.yml */; };
+		B06E2ADA1BE919FA00C299B4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B06E2AD91BE919FA00C299B4 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		B04E48E019C0A24100FA01D2 /* sibeliusGMajor.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = sibeliusGMajor.mid; path = ../sibeliusGMajor.mid; sourceTree = "<group>"; };
 		B04E48E419C0BCE500FA01D2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B055F22919C0EC7C00408FA6 /* gs_instruments.dls */ = {isa = PBXFileReference; lastKnownFileType = file; name = gs_instruments.dls; path = ../gs_instruments.dls; sourceTree = "<group>"; };
+		B06E2AD51BE9186F00C299B4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B06E2AD71BE919AE00C299B4 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		B06E2AD91BE919FA00C299B4 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,9 @@
 		B04E48AE19C0A08D00FA01D2 = {
 			isa = PBXGroup;
 			children = (
+				B06E2AD91BE919FA00C299B4 /* .gitignore */,
+				B06E2AD71BE919AE00C299B4 /* .travis.yml */,
+				B06E2AD51BE9186F00C299B4 /* LICENSE */,
 				B04E48E419C0BCE500FA01D2 /* README.md */,
 				B04E48B919C0A08D00FA01D2 /* MIDIPlayer */,
 				B04E48CF19C0A08D00FA01D2 /* MIDIPlayerTests */,
@@ -207,8 +216,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B06E2ADA1BE919FA00C299B4 /* .gitignore in Resources */,
 				B04E48E119C0A24100FA01D2 /* sibeliusGMajor.mid in Resources */,
 				B04E48DF19C0A0FB00FA01D2 /* ntbldmtn.mid in Resources */,
+				B06E2AD61BE9186F00C299B4 /* LICENSE in Resources */,
+				B06E2AD81BE919AE00C299B4 /* .travis.yml in Resources */,
 				B04E48DD19C0A0D900FA01D2 /* GeneralUser GS MuseScore v1.442.sf2 in Resources */,
 				B04E48C219C0A08D00FA01D2 /* Main.storyboard in Resources */,
 				B04E48C719C0A08D00FA01D2 /* LaunchScreen.xib in Resources */,
