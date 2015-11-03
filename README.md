@@ -1,5 +1,12 @@
 # MIDIPlayer
 
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://en.wikipedia.org/wiki/MIT_License)
+[![Build Status](https://travis-ci.org/genedelisa/MIDIPlayer.svg)](https://travis-ci.org/genedelisa/MIDIPlayer)
+[![GitHub tag](https://img.shields.io/github/tag/genedelisa/MIDIPlayer.svg)](https://github.com/genedelisa/MIDIPlayer/)
+[![GitHub release](https://img.shields.io/github/release/genedelisa/MIDIPlayer.svg)](https://github.com/genedelisa/MIDIPlayer/)
+[![GitHub commits](https://img.shields.io/github/commits-since/genedelisa/MIDIPlayer/2.0.0.svg)
+
+
 Using AVMIDIPlayer from a MIDI file, and from a MusicSequence.
 
 Neither SoundFonts nor DLS files will play in the simulator. They play on the device though.
